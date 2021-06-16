@@ -16,8 +16,25 @@ function writePassword() {
   allLowerCase = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
   allNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
   allSpec = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '"', '+', ',', '-', '.', '/', ':', ';', '<', '>', '=', '?','[', ']', '{', '}', '~', '`', '|', '_']
+  allCanids= [allUpperCase,allLowerCase,allNumbers,allSpec]
   passwordText.value = password;
+
+
+  if(passUp, passLow, passNum, passSpec === false){
+      alert("Choose at least one type of character");
+      end()
+ 
+ 
+    }
+    if(passLength < 8 or passLength > 128){
+        alert("Password length must be between 8 and 128 characters");
+      end()
+ 
+    }
+
+
 }
+
 
 // Add event listener to generate button
 generateBtn.addEventListener('click', writePassword);
