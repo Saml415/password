@@ -104,19 +104,30 @@ function writePassword() {
   var passUp = window.confirm("Do you want uppercase letters?");
   if (passUp) {
     allCanids = allCanids.concat(allUpperCase);
-
+    var index = Math.floor(Math.random() * allUpperCase.length);
+    var nextChar = allCanids[index];
+    password += nextChar;
   }
   var passLow = window.confirm("Do you want lowercase letters?");
   if (passLow) {
     allCanids = allCanids.concat(allLowerCase);
+    index = Math.floor(Math.random() * allLowerCase.length);
+    nextChar = allCanids[index];
+    password += nextChar;
   }
   var passNum = window.confirm("Do you want numbers?");
   if (passNum) {
     allCanids = allCanids.concat(allNumbers);
+    index = Math.floor(Math.random() * allNumbers.length);
+    nextChar = allCanids[index];
+    password += nextChar;
   }
   var passSpec = window.confirm("Do you want special characters?");
   if (passSpec) {
     allCanids = allCanids.concat(allSpec);
+    index = Math.floor(Math.random() * allSpec.length);
+    nextChar = allCanids[index];
+    password += nextChar;
   }
   if (!passUp && !passLow && !passNum && !passSpec) {
     window.alert("At least one character type must be included!");
@@ -124,12 +135,12 @@ function writePassword() {
   }
 
   for (i = 0; i < passLength; i++) {
-    var index = Math.floor(Math.random() * allCanids.length);
-    var nextChar = allCanids[index];
+    index = Math.floor(Math.random() * allCanids.length);
+    nextChar = allCanids[index];
     password += nextChar;
 
-    var index = Math.floor(Math.random() * allCanids.length);
-    var nextChar = allCanids[index];
+    index = Math.floor(Math.random() * allCanids.length);
+    nextChar = allCanids[index];
     password += nextChar;
   }
 
