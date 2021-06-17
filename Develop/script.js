@@ -5,10 +5,18 @@ var generateBtn = document.querySelector('#generate');
 // Write password to the #password input
 function writePassword() {
   var passLength = window.prompt('Please select the length of your passcode.')
+  if(passLength < 8 || passLength > 128){
+    alert("Password length must be between 8 and 128 characters");
+  end()
+
+}
   var passUp = window.confirm('Do you want uppercase letters?')
   var passLow = window.confirm('Do you want lowercase letters?')
   var passNum = window.confirm('Do you want numbers?')
   var passSpec = window.confirm('Do you want special characters?')
+  
+
+  
   var password = generatePassword();
   var passwordText = document.querySelector('#password');
 
@@ -20,17 +28,7 @@ function writePassword() {
   passwordText.value = password;
 
 
-  if(passUp, passLow, passNum, passSpec === false){
-      alert("Choose at least one type of character");
-      end()
- 
- 
-    }
-    if(passLength < 8 or passLength > 128){
-        alert("Password length must be between 8 and 128 characters");
-      end()
- 
-    }
+  
 
 
 }
