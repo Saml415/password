@@ -14,6 +14,9 @@ function writePassword() {
   var passLow = window.confirm('Do you want lowercase letters?')
   var passNum = window.confirm('Do you want numbers?')
   var passSpec = window.confirm('Do you want special characters?')
+  if (!passUp && !passLow && !passNum && !passSpec) {
+    window.alert("At least one of letters must be included!")
+    return;}
   
 
   
