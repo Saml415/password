@@ -14,6 +14,8 @@ This repository consists of the files required to run a simple javacript based p
 
   4. The javascript is present in the script.js file.
 
+
+![03-javascript-homework-demo](https://user-images.githubusercontent.com/81829274/122484591-c22b0300-cf89-11eb-90ba-ef01f338413d.png)
   
 
   
