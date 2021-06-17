@@ -4,16 +4,20 @@ var generateBtn = document.querySelector('#generate');
 
 // Write password to the #password input
 function writePassword() {
-  var passLength = window.prompt('Please select the length of your passcode.')
+  var passLength = window.prompt('Please select the length of your passcode (Must be between 8 to 128 characters long.).')
   if(passLength < 8 || passLength > 128){
     alert("Password length must be between 8 and 128 characters");
   end()
 
 }
   var passUp = window.confirm('Do you want uppercase letters?')
+  if (passUp) {allCanids.concat(allUpperCase);}
   var passLow = window.confirm('Do you want lowercase letters?')
+  if (passLow) {allCanids.concat(allLowerCase);}
   var passNum = window.confirm('Do you want numbers?')
+  if (passNumn) {allCanids.concat(allNumbers);}
   var passSpec = window.confirm('Do you want special characters?')
+  if (passSpec) {allCanids.concat(allSpec);}
   if (!passUp && !passLow && !passNum && !passSpec) {
     window.alert("At least one of letters must be included!")
     return;}
@@ -27,7 +31,7 @@ function writePassword() {
   allLowerCase = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
   allNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
   allSpec = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '"', '+', ',', '-', '.', '/', ':', ';', '<', '>', '=', '?','[', ']', '{', '}', '~', '`', '|', '_']
-  allCanids= [allUpperCase,allLowerCase,allNumbers,allSpec]
+  allCanids= []
   passwordText.value = password;
 
 
